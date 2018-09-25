@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+
+class complex
+{
+    int a,b;
+    
+    public:
+    
+        void setData(int x,int y)
+        {
+            a=x;
+            b=y;
+        }
+        
+        void showData()
+        {
+            cout<<"a="<<a<<"b="<<b<<endl;
+        }
+        
+        complex operator - ()
+        {
+            complex temp;
+            temp.a=-a;
+            temp.b=-b;
+            return(temp);
+            
+        }
+        
+};
+
+int main()
+{
+    complex c1,c2;
+    c1.setData(4,7);
+    c2=-c1;
+    
+    c2.showData();
+    return 0;
+******************************
+
+output:-
+
+a=-4 b=-7
